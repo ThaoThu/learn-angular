@@ -1,0 +1,25 @@
+<p>home works!</p>
+<h1>Hello angular 9</h1>
+<h3 class="red">hahahah. Xin chao {{name| uppercase }}</h3>
+<p>Nam nay minh {{age | number}} tuoi</p>
+
+{{ age | number:'1.1-3' }}
+<p *ngIf="age >= 18" class="overAge">Minh 18+ nha</p>
+<p *ngIf="age < 18" class="underAge">Minh 18- nha</p>
+
+<h4>DS vehicles</h4>
+<ul>
+    <li  *ngFor="let item of vehicles">{{item}}</li>
+</ul>
+<select>
+    <option *ngFor="let item of vehicles">{{item}}</option>
+</select>
+<button (click)="tangTuoi()">Tăng tuổi nào!!</button>
+<input type="text" [(ngModel)]="name">
+
+<div *ngIf="age >=18;  else elseBlock "> > 18</div>
+<!-- <ng-template #thenTrue></ng-template> -->
+<ng-template #elseBlock>< 18</ng-template>
+
+
+
